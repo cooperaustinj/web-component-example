@@ -48,7 +48,7 @@ const plugins = [
     new webpack.HotModuleReplacementPlugin(),
 ];
 
-module.exports = ({ mode, presets }) => {
+module.exports = ({ mode }) => {
     return {
         mode,
         output: {
@@ -63,7 +63,7 @@ module.exports = ({ mode, presets }) => {
                 {
                     test: /\.js$/,
                     exclude: /node_modules/,
-                    loader: 'babel-loader',
+                    use: {loader:'babel-loader'},
                 },
                 {
                     test: /\.lit$/,
