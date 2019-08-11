@@ -1,0 +1,24 @@
+<style lang="scss">
+div {
+    color: blue;
+    font-family: Sans-Serif;
+}
+</style>
+
+<template>
+    <div>
+        <h1>Hello world!</h1>
+    </div>
+</template>
+
+<script>
+import { LitElement, html, css } from 'lit-element';
+
+class HelloWorld extends LitElement {
+    constructor() {
+        super();
+    }
+}
+
+customElements.define('hello-world', HelloWorld);
+</script>

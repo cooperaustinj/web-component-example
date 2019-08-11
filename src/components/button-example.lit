@@ -1,0 +1,52 @@
+<style lang="scss">
+div {
+    font-family: Sans-Serif;
+}
+button {
+    border: none;
+    color: #fff;
+    background-color: rgb(48, 147, 228);
+    padding: 0.5rem;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.count {
+    margin-bottom: 0.5rem;
+}
+</style>
+
+<template>
+    <!-- eslint-disable -->
+    <div>
+        <div class="count">Count: ${this.count}</div>
+        <button @click="'${this.increment}'">Increment</button>
+        <button @click="'${this.decrement}'">Decrement</button>
+    </div>
+</template>
+
+<script>
+import { LitElement, html, css } from 'lit-element';
+
+class ButtonExample extends LitElement {
+    static get properties() {
+        return {
+            count: Number,
+        };
+    }
+
+    constructor() {
+        super();
+        this.count = 0;
+    }
+
+    increment() {
+        this.count++;
+    }
+
+    decrement() {
+        this.count--;
+    }
+}
+
+customElements.define('button-example', ButtonExample);
+</script>

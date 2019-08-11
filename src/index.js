@@ -1,2 +1,2 @@
-import './styles.css';
-import './views/todo-view.js';
+import './components/hello-world.lit';
+import './components/button-example.lit';
